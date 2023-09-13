@@ -151,7 +151,7 @@ class Extractor {
         }
 
         if (!mode) {
-          mode = 0o644
+          mode = 0o666
         }
       }
     }

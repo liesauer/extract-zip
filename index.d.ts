@@ -10,7 +10,7 @@ declare namespace extract {
         dir: string;
         /** Directory Mode (permissions), defaults to `0o755` */
         defaultDirMode?: number;
-        /** File Mode (permissions), defaults to `0o644` */
+        /** File Mode (permissions), defaults to `0o666` */
         defaultFileMode?: number;
         /**
          * If present, will be called with (entry, zipfile),

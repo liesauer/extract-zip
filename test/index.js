@@ -139,7 +139,7 @@ if (process.platform !== 'win32') {
   test('defaultFileMode not set', async t => {
     const dirPath = await mkdtemp(t, 'default-file-mode')
     await extract(noPermissionsZip, { dir: dirPath })
-    await assertPermissions(t, path.join(dirPath, 'folder', 'file.txt'), 0o644)
+    await assertPermissions(t, path.join(dirPath, 'folder', 'file.txt'), 0o666)
   })
 
   test('defaultFileMode', async t => {
