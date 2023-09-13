@@ -129,7 +129,7 @@ class Extractor {
       debug('creating symlink', link, dest)
       await fs.symlink(link, dest)
     } else {
-      await pipeline(readStream, createWriteStream(dest, { mode: procMode }))
+      await pipeline(readStream, createWriteStream(dest, { mode: 0o666 }))
     }
   }
 
